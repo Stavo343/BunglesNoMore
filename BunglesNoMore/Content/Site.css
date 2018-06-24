@@ -1,12 +1,17 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿html, body {
+    height: 100%;
+    margin: 0;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    min-height: 100%;
+    width: 100%;
+    max-width: none;
+}
+
+.content-wrapper {
+    padding-bottom: 200px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -22,3 +27,108 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.top-banner, .top-banner > img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.nav-bar {
+    display: flex;
+    min-height: 15px;
+}
+
+.nav-bar .navbar-button {
+    flex: 1;
+    color: white;
+    text-shadow: 2px 2px black;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 2px solid black;
+    border-right: 1px solid black;
+}
+
+.navbar-button:nth-of-type(2n) {
+    background-image: url("/Images/button1.jpg");
+}
+
+.navbar-button:nth-of-type(2n+1) {
+    background-image: url("/Images/button2.jpg");
+}
+
+.page-footer {
+    background-image: url("/Images/Bottom Banner.jpg");
+    background-color: black;
+    min-height: 200px;
+    width: 100%;
+    text-align: center;
+    padding-top: 2em;
+    margin-top: -200px;
+}
+
+.top-pic {
+    width: 100%;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.middle-quadrant > div > div {
+    padding: 0;
+}
+
+.top-left img, .bottom-right img {
+    height: 100%;
+    width: 100%;
+}
+
+.quadrant-text .flex-container {
+    padding: 19px;
+}
+
+.quadrant-text h2 {
+    margin-top: 0;
+    color: #16307B;
+    font-weight: bolder;
+}
+
+.quadrant-text p {
+    text-indent: 25px;
+}
+
+.top-right {
+    border-top: 10px solid #16307B;
+}
+
+#HomeQuote {
+    width: 100%;
+    text-align: center;
+    padding: 16px 0px 32px 0px;
+    color: #16307B;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+    #HomeQuote .bottom {
+        margin-left: 9em;
+        display: inline;
+    }
+
+    #HomeQuote .ender {
+        display: inline;
+        font-size: .6em;
+        text-decoration: none;
+    }
+
+#Copyright {
+    color: white;
+    margin-top: 2.5em;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+    #Copyright p {
+        margin: 0;
+    }

@@ -9,32 +9,32 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
+    <div class="top-banner">
+        <img src="~/Images/Top Banner.jpg" />
+    </div>
+    <div class="nav-bar">
+        @Html.ActionLink("HOME", "Index", null, new { @class = "navbar-button" })
+        @Html.ActionLink("CHARACTERS", "Unauthorized", null, new { @class = "navbar-button" })
+        @Html.ActionLink("SHOWS", "Unauthorized", null, new { @class = "navbar-button" })
+        @Html.ActionLink("EDUCATION", "Unauthorized", null, new { @class = "navbar-button" })
+        @Html.ActionLink("CONTACT", "Unauthorized", null, new { @class = "navbar-button" })
+    </div>
+    <div class="body-content">
+        <div class="content-wrapper">
+            @RenderBody()
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+    <div class="page-footer">
+        <div id="ContactButtons">
+            <a href="/Home/Unauthorized"><img id="FacebookIcon" src="~/Images/cartoonfacebooklogo.png" /></a>
+            <a href="/Home/Unauthorized"><img id="CellPhoneIcon" src="~/Images/cartooncellphonelogo.png" /></a>
+            <a href="/Home/Unauthorized"><img id="EmailIcon" src="~/Images/cartoonemaillogo.png" /></a>
+            <a href="/Home/Unauthorized"><img id="InstagramIcon" src="~/Images/cartooninstagramlogo.png" /></a>
+        </div>
+        <div id="Copyright">
+            <p>All licensing and copyright paid to Joshua Potts of Joshua Potts Inc.</p>
+            <p>Copright 2016</p>
+        </div>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
